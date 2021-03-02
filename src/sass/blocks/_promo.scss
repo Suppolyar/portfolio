@@ -1,20 +1,31 @@
 .promo {
     min-height: 100vh;
     position: relative;
-    background: url('../img/header-bg.jpg') no-repeat 50%/cover;
     padding-top: 205px;
+    background: url('../img/ilya.png') no-repeat;
+    background-size: contain;
+    background-position: right top;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     &__title {
         width: 535px;
         margin-top: 10px;
+        left: 70px;
+        text-align: center;
     }
     &__subtitle {
         position: relative;
         padding-left: 10px;
+        left: -80px;
         @include before_circle;
         z-index: 2;
     }
     &__btns {
-        margin-top: 25px;
+        margin-top: 15px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -23,9 +34,11 @@
     &__link {
         color: black;
         font-weight: bold;
+        transition: all 1s ease;
         &:hover {
-            color: black;
+            color: $main-color;
             text-decoration: none;
         }
     }
 }
+

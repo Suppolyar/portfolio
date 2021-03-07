@@ -139,7 +139,17 @@
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
-                    <img src="img/photo1.png" alt="">
+                    <!-- <img srcset="img/photo1-min.png 271w, 
+                                img/photo1.png 398w"
+                        sizes="(max-width: 576px) 271px,
+                               (min-width: 577px) 398px"
+                    src="img/photo1.png" alt=""> -->
+
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="img/photo1-min.png">
+                        <source media="(min-width: 577px)" srcset="img/photo1.png">
+                        <img src="img/photo1.png" alt="photo">
+                    </picture>
                 </div>
                 <div class="about__descr">
                     <h2 class="title title_fz16 about__title">
@@ -184,7 +194,7 @@
         </div>
     </section>
 
-    <!-- <section class="resume">
+    <section class="resume">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">
                 Опыт
@@ -424,7 +434,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <script src="js/script.js"></script>
 </body>
